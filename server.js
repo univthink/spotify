@@ -110,7 +110,7 @@ function(req, res){
 //   request. If authentication fails, the user will be redirected back to the
 //   login page. Otherwise, the primary route function function will be called,
 //   which, in this example, will redirect the user to the home page.
-app.get('/auth/callback',
+app.get('/auth/callback/',
 passport.authenticate('spotify', { failureRedirect: '/' }),
 function(req, res) {
   res.redirect('/');
